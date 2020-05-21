@@ -12,10 +12,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.opa.eligible_device=true
 
-# Snap
-PRODUCT_PACKAGES += \
-    Snap
-
 # Build vendor img
 AB_OTA_PARTITIONS += \
     vendor
