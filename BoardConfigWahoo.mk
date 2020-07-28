@@ -1,5 +1,8 @@
 # Common board config for taimen, walleye
 
+# Use prebuilt vendor
+BOARD_PREBUILT_VENDORIMAGE := true
+
 # Audio
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
