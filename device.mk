@@ -746,6 +746,10 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge:32 \
     libtinyxml
 
+# Last stock security patch levels
+PLATFORM_SECURITY_PATCH := 2020-10-05
+VENDOR_SECURITY_PATCH := "2020-10-05"
+
 # Add missing vendor props
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
