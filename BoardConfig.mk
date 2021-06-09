@@ -35,17 +35,18 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 BUILD_BROKEN_VINTF_PRODUCT_COPY_FILES := true
 
 # Inline kernel building configs
-TARGET_KERNEL_CLANG_COMPILE := false
-TARGET_KERNEL_SOURCE := kernel/google/xenial
-TARGET_KERNEL_CONFIG := xenial_defconfig
-TARGET_KERNEL_ARCH := arm64
+#TARGET_KERNEL_CLANG_COMPILE := false
+TARGET_KERNEL_SOURCE := kernel/google/wahoo
+#TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_CONFIG := lineageos_taimen_defconfig
+#TARGET_KERNEL_ARCH := arm64
 BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-elf-
-KERNEL_TOOLCHAIN := $(PWD)/prebuilts/gcc/linux-x86/aarch64/arm64-gcc/bin
-TARGET_KERNEL_ADDITIONAL_FLAGS := \
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_NEEDS_DTBOIMAGE := true
+#TARGET_KERNEL_ADDITIONAL_FLAGS := \
     DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc \
     MKDTIMG=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/libufdt/mkdtimg
-TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
+#TEMPORARY_DISABLE_PATH_RESTRICTIONS := true
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=$(TARGET_BOOTLOADER_BOARD_NAME) androidboot.console=ttyMSM0 lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3
