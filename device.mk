@@ -18,6 +18,9 @@
 PLATFORM_SECURITY_PATCH := 2020-10-05
 VENDOR_SECURITY_PATCH := "2020-10-05"
 
+# SafetyNet
+PRODUCT_SAFETYNET_MODEL_HACK := true
+
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
