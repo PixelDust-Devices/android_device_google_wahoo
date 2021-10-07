@@ -871,3 +871,6 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     lib-imsvtshim
+
+# VNDK
+$(foreach target, $(shell cat $(LOCAL_PATH)/vndk.txt), $(eval PRODUCT_PACKAGES += $(target).vendor))
