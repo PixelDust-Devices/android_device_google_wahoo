@@ -182,6 +182,12 @@ DEVICE_FRAMEWORK_MANIFEST_FILE := device/google/wahoo/configs/manifests/framewor
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := device/google/wahoo/configs/manifests/device_framework_matrix.xml
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
+# Add CAF specific Vendor Interface Manifest if needed
+ifneq (,$(filter caf, $(BUILD_VERSION_CODE)))
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    device/google/wahoo/vendor_framework_compatibility_matrix.xml
+endif
+
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
