@@ -1,6 +1,16 @@
 [
    {
-     "repository": "kernel_google_wahoo",
+     "repository": "android_kernel_google_wahoo",
      "target_path": "kernel/google/wahoo"
+   },
+   {
+     "repository": "android_hardware_qcom_msm8998",
+     "target_path": "hardware/qcom/msm8998",
+     "remote": "pdcaf",
+     "revision": "sc-v2"
+   },
+   {
+     "repository": "android_vendor_google",
+     "target_path": "vendor/google"
    }
 ]
